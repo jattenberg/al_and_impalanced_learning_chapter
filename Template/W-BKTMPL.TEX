@@ -1,0 +1,554 @@
+%% w-bktmpl.tex. Current Version: October 6,2008
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Template file for
+%  Wiley Book Style, Design No.: SD 001B, 7x10
+%  Wiley Book Style, Design No.: SD 004B, 6x9
+%
+%
+%  Prepared by Amy Hendrickson, TeXnology Inc.
+%  http://www.texnology.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Class File
+
+%% For default 7 x 10 trim size:
+%\documentclass{WileySev}
+
+%% Or, for 6 x 9 trim size
+\documentclass{WileySix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Post Script Font File(s)
+
+% For TimesRoman Math (You must have MathTimes and MathTimes Plus 
+%                        font sets, order fonts from  www.yandy.com)
+% \usepackage[mtbold,noTS1]{m-times}
+
+% For PostScript text
+\usepackage{w-bookps}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graphicx.sty for Including PostScript .eps files
+
+%% If you don't have graphicx.sty available, unzip the graphics.zip
+%% file included in this package.
+
+% Choose one of these options, based on the system that you are using.
+% If none look like your system, use dvips
+% [dvips], [xdvi], [dvipdf], [dvipsone], [dviwindo], [emtex], [dviwin],
+% [pctexps],  [pctexwin],  [pctexhp],  [pctex32], [truetex], [tcidvi],
+% [oztex], [textures]
+
+\usepackage[dvipsone]{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Change options here if you want:
+%%
+%% How many levels of section head would you like numbered?
+%% 0= no section numbers, 1= section, 2= subsection, 3= subsubsection
+%%==>>
+\setcounter{secnumdepth}{3}
+
+%% How many levels of section head would you like to appear in the
+%% Table of Contents?
+%% 0= chapter titles, 1= section titles, 2= subsection titles, 
+%% 3= subsubsection titles.
+%%==>>
+\setcounter{tocdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DRAFT
+%
+% Uncomment to get double spacing between lines, current date and time
+% printed at bottom of page.
+% \draft
+% (If you want to keep tables from becoming double spaced also uncomment
+% this):
+% \renewcommand{\arraystretch}{0.6}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title Pages
+
+%% Setting up title pages:
+\booktitle{}
+\subtitle{}
+
+\author{}
+or
+\authors{}
+
+%% \\ will start a new line.
+%% You may add \affil{} for affiliation, ie,
+%\authors{Robert M. Groves\\
+%\affil{Universitat de les Illes Balears}
+%Floyd J. Fowler, Jr.\\
+%\affil{University of New Mexico}
+%}
+
+%% Print Half Title and Title Page:
+\halftitlepage
+\titlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Off Print Info
+
+%% Add your info here:
+\offprintinfo{title, edition}{author}
+
+%% Can use \\ if title, and edition are too wide, ie,
+%% \offprintinfo{Survey Methodology,\\ Second Edition}{Robert M. Groves}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Copyright Page
+
+\begin{copyrightpage}{year}
+Title, etc
+\end{copyrightpage}
+
+% Note, you must use \ to start indented lines, ie,
+% 
+% \begin{copyrightpage}{2004}
+% Survey Methodology / Robert M. Groves . . . [et al.].
+% \       p. cm.---(Wiley series in survey methodology)
+% \    ``Wiley-Interscience."
+% \    Includes bibliographical references and index.
+% \    ISBN 0-471-48348-6 (pbk.)
+% \    1. Surveys---Methodology.  2. Social 
+% \  sciences---Research---Statistical methods.  I. Groves, Robert M.  II. %
+% Series.\\
+
+% HA31.2.S873 2004
+% 001.4'33---dc22                                             2004044064
+% \end{copyrightpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Frontmatter >>>>>>>>>>>>>>>>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only Dedication (optional) before \tableofcontents
+
+\dedication{}
+
+% ie,
+%\dedication{To my parents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Contributors Page for Edited Book
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If your book has chapters written by different authors,
+% you'll need a Contributors page.
+
+% Use \begin{contributors}...\end{contributors} and
+% then enter each author with the \name{} command, followed
+% by the affiliation information.
+
+% \begin{contributors}
+% \name{Masayki Abe,} Fujitsu Laboratories Ltd., Fujitsu Limited, Atsugi,
+% Japan
+
+% \name{L. A. Akers,} Center for Solid State Electronics Research, Arizona
+% State University, Tempe, Arizona
+
+% \name{G. H. Bernstein,} Department of Electrical and
+% Computer Engineering, University of Notre Dame, Notre Dame, South Bend, 
+% Indiana; formerly of
+% Center for Solid State Electronics Research, Arizona
+% State University, Tempe, Arizona 
+% \end{contributors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+% \listoffigures %optional
+% \listoftables  %optional
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Foreword:
+
+%\begin{foreword}
+%text
+%\end{foreword}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Preface:
+
+%\begin{preface}
+% text
+%\prefaceauthor{}
+%\where{place\\
+% date}
+%\end{preface}
+
+% ie,
+% \begin{preface}
+% This is an example preface.
+% \prefaceauthor{R. K. Watts}
+% \where{Durham, North Carolina\\
+% September, 2004}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Acknowledgments:
+
+% \acknowledgments
+% acknowledgment text
+% \authorinitials{} % ie, I. R. S.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Acronyms:
+
+% \acronyms
+% \markboth{Acronyms}{Acronyms}
+% \acro{acronym}{meaning}
+
+% ie,
+% \acronyms
+% \markboth{Acronyms}{Acronyms}
+% \acro{ACGIH}{American Conference of Governmental Industrial Hygienists}
+% \acro{AEC}{Atomic Energy Commission}
+% \acro{OSHA}{Occupational Health and Safety Commission}
+% \acro{SAMA}{Scientific Apparatus Makers Association}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Introduction:
+
+%\introduction
+% optional reference section
+%\begin{chapreferences*}
+%\bibitem{}
+%\bibitem{}
+%\end{chapreferences*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End for Front Matter, Beginning of text of book  >>>>>>>>>>>
+
+%% Short version of title without \\ may be written in sq. brackets:
+
+%% Optional Part :
+\part[Submicron Semiconductor Manufacture]
+{Submicron Semiconductor\\ Manufacture}
+
+\chapter[The Submicrometer Silicon MOSFET]
+{The Submicrometer\\ Silicon MOSFET}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional prologue or prologues
+% \chapter{Chapter Title}
+% \prologue{<text>}{<author attribution>}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edited Book: Author and Affiliation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% After \chapter{Chapter Title}, you can
+% enter the author name and embed the affiliation with
+% \chapterauthors{(author name, or names)
+% \chapteraffil{(affiliation or affiliations)}
+% }    
+
+% For instance:
+% \chapter{Chapter Title}
+% \chapterauthors{G. Alvarez and R. K. Watts
+% \chapteraffil{Carnegie Mellon University, Pittsburgh, Pennsylvania}
+
+% For separate affiliations you can use \affilmark{(number)} after
+% the name of a particular author and before the matching affiliation:
+
+% For instance:
+% \chapter{Chapter Title}
+% \chapterauthors{George Smeal, Ph.D.\affilmark{1}, Sally Smith,
+% M.D.\affilmark{2}, and Stanley Kubrick\affilmark{1}
+% \chapteraffil{\affilmark{1}AT\&T Bell Laboratories
+% Murray Hill, New Jersey\\
+% \affilmark{2}Harvard Medical School,
+% Boston, Massachusetts}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% short version of section head, or one without \\ supplied in sq. brackets.
+\section[Introduction and fugue]{Introduction\\ and fugue}
+\subsection[This is the subsection]{This is the\\ subsection}
+\subsubsection{This is the subsubsection}
+\paragraph{This is the paragraph}
+
+\begin{chapreferences}
+\bibitem{<label>}Reference
+\end{chapreferences}
+
+% optional chapter bibliography using BibTeX:
+\bibliographystyle{plain}
+\chapbblname{}      %% bibliography .bbl file
+\chapbibliography{} %% database .bib file
+
+% optional appendix at the end of a chapter:
+\chapappendix{<chap appendix title>}
+
+\chapappendix{} % no title
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End Matter >>>>>>>>>>>>>>>>>>
+
+\appendix{<optional title for appendix at end of book>}
+\appendix{} % appendix without title
+
+\begin{references}
+...
+\end{references}
+
+\begin{glossary}
+\term{xxx}Text...
+\term{yyy}Text...
+\end{glossary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Problem Sets: Can use this at the end of each chapter or at end
+%% of book
+
+% \begin{problems}
+% \prob
+% text
+
+% \prob
+% text
+
+% \subprob
+% text
+
+% \subprob
+% text
+
+% \prob
+% text
+% \end{problems}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Exercises: Can use this at the end of each chapter or at end
+%% of book
+
+% \begin{exercises}
+% \exer
+% text
+
+% \exer
+% text
+
+% \subexer
+% text
+
+% \subexer
+% text
+
+% \exer
+% text
+% \end{exercises}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INDEX: Use only one index command set:
+
+%% 1)  The default LaTeX Index
+\latexprintindex
+
+%% 2) Wiley method of producing an index
+
+%% Enter author entries like this: \inxx{Redwoods}, 
+%% \inxx{Redwoods,California} for California to be listed underneath
+%% Redwoods
+%% When you run LaTeX on your file you will produce filename.inx.
+%%   You will need an .srt file to produce the author index.
+%% Sort the filename.inx file to produce filename.srt:
+%%    sort filename.inx > filename.srt
+%% Edit filename.srt to make sure that ~ is the last character in the file
+%\printindex
+
+%% 3)  Use these commands if you are making a separate topic and author index:
+%\printtopicindex
+%\printauthorindex
+
+%% Author index info:
+%% Enter author entries like this: \anxx{Dillon\, Matt}
+%% When you run LaTeX on your file you will produce filename.aut.
+%%   You will need an .att file to produce the author index.
+%% Sort the filename.aut file to produce filename.att:
+%%    sort filename.aut > filename.att
+%% Edit filename.att to make sure that ~ is the last character in the file
+
+
+\end{document}
+
+%%%%%%% Demo of section head containing sample macro:
+%% To get a macro to expand correctly in a section head, with upper and
+%% lower case math, put the definition and set the box 
+%% before \begin{document}, so that when it appears in the 
+%% table of contents it will also work:
+
+\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+
+%% use a box to expand the macro before we put it into the section head:
+
+\newbox\sectsavebox
+\setbox\sectsavebox=\hbox{\boldmath\VT{xyz}}
+
+%%%%%%%%%%%%%%%%% End Demo
+
+
+Other commands, and notes on usage:
+
+-----
+Possible section head levels:
+\section{Introduction}
+\subsection{This is subsection}
+\subsubsection{This is subsubsection}
+\paragraph{This is the paragraph}
+
+-----
+Captions:
+ If you use index commands within a caption, precede \inx or \inxx with
+ \protect.
+
+\begin{figure}[h]
+\caption{\protect\inx{Oscillograph} for memory address access ....
+memory plane.}
+\end{figure}
+
+-----
+Tables:
+ Remember to use \centering for a small table and to start the table
+ with \hline, use \hline underneath the column headers and at the end of 
+ the table, i.e.,
+
+\begin{table}[h]
+\caption{Small Table}
+\centering
+\begin{tabular}{ccc}
+\hline
+one&two&three\\
+\hline
+C&D&E\\
+\hline
+\end{tabular}
+\end{table}
+
+For a table that expands to the width of the page, write
+
+\begin{table}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+\hline
+....
+\end{tabular*}
+%% Sample table notes:
+\begin{tablenotes}
+$^a$Refs.~19 and 20.
+
+$^b\kappa, \lambda>1$.
+\end{tablenotes}
+\end{table}
+
+-----
+Algorithm.
+Maintains same fonts as text (as opposed to verbatim which uses fixed
+width fonts). Space at beginning of line will be maintained if you
+use \ at beginning of line.
+
+\begin{algorithm}
+{\bf state\_transition algorithm} $\{$
+\        for each neuron $j\in\{0,1,\ldots,M-1\}$
+\        $\{$   
+\            calculate the weighted sum $S_j$ using Eq. (6);
+\            if ($S_j>t_j$)
+\                    $\{$turn ON neuron; $Y_1=+1\}$   
+\            else if ($S_j<t_j$)
+\                    $\{$turn OFF neuron; $Y_1=-1\}$   
+\            else
+\                    $\{$no change in neuron state; $y_j$ remains %
+unchanged;$\}$ .
+\        $\}$   
+$\}$   
+\end{algorithm}
+
+-----
+Sample quote:
+\begin{quote}
+quotation...
+\end{quote}
+
+-----
+Listing samples
+
+\begin{enumerate}
+\item
+This is the first item in the numbered list.
+
+\item
+This is the second item in the numbered list.
+\end{enumerate}
+
+\begin{itemize}
+\item
+This is the first item in the itemized list.
+
+\item
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+\end{itemize}
+
+\begin{itemize}
+\item[]
+This is the first item in the itemized list.
+
+\item[]
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+\end{itemize}
+
+----
+Glossary:
+
+\begin{glossary}
+\term{xxx}Text...
+\term{yyy}Text...
+\end{glossary}
+
+i.e.,
+\begin{glossary}
+\term{GaAs}Gallium Arsinide. For similar device sizes GaAs transistors 
+have three to
+five times greater transconductance than those of of silicon bipolar
+and MOS transistors.
+
+\term{VLSI}Very Large Scale Integration. Since the mid-1970's 
+VLSI technology has been successfully used in many areas, but its effect on
+computers of all shapes and sizes has been the most dramatic. Some of the
+application areas got boosts in performance while others became
+feasible.
+
+\end{glossary}
+
+-----
+Index commands:
+\inx{term} will print `term' in text but will also send `term' and its
+page number to the .inx file.
+
+\inxx{term} will not print in text but will send term and its page number to
+the .inx file.
+
+\inxx{term,second term} will not print in text but will send `second term'
+to inx file to print underneath `term' in the index.
+
+1) Run Latex on file,
+2) Run sort routine on file ie. `sort < filename.inx > filename.srt' on
+your system to produce a filename.srt file
+3)\printindex at end of book will input filename.srt and print index.
+
+See documentation for more information.
+
+

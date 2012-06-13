@@ -1,0 +1,79 @@
+\documentclass{wileySix}
+
+\usepackage{verbatim}
+
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{slashbox}
+\usepackage{array}
+\usepackage{wrapfig}
+
+
+\usepackage{color}
+
+
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{amsmath, amssymb}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{epsfig}
+\usepackage{balance}
+\usepackage{epstopdf}
+
+
+\hyphenpenalty=5000
+\tolerance=1000
+\usepackage{float}
+\floatstyle{ruled}
+\newfloat{algo}{thp}{lop}
+\floatname{algo}{Algorithm}
+\newcommand{\josh}[1]{}%{{\bf [JOSH:{\em {#1}}]}}
+\newcommand{\seyda}[1]{}%{{\bf [SEYDA:{\em {#1}}]}}
+
+\newcommand {\drop}[1] {}
+\setcounter{chapter}{6}
+
+
+\begin{document}
+
+\offprintinfo{Reinforcement Learning and Approximate Dynamic Programming for Feedback Control,}{Frank L. Lewis and Derong Liu}
+
+\chapter{Class Imbalance and Active Learning}
+\chapterauthors{ Josh Attenberg$^\ast$ and \c{S}eyda Ertekin$^\dag$
+\chapteraffil{$^\ast$Etsy; $\dag$MIT Sloan School of Management}
+}
+%	Josh Attenberg \\
+%	Etsy \\
+%	Brooklyn, NY 11201\\
+%	\small\href{mailto:jattenberg@etsy.com}{\nolinkurl{jattenberg@etsy.com}}
+%	\and
+%	\c{S}eyda Ertekin \\
+%	MIT Sloan School of Management \\
+%    	Massachusetts Institute of Technology\\
+%	Cambridge, MA 02142\\
+%	\small\href{mailto:seyda@mit.edu}{\nolinkurl{seyda@mit.edu}}
+%	}
+\date{}
+
+\input{intro}
+\input{active_background}
+\input{svm_imbalance}
+\input{adaptive}
+%\input{seyda_tmp}
+\input{skew_problem}
+\input{starting_cold}
+\input{alternatives}
+\input{afl_and_ads}
+\input{conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{ieeetr}
+\bibliography{Ch7_reference.bib}
+\end{document}
+

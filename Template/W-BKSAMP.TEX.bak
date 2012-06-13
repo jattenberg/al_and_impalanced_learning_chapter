@@ -1,0 +1,337 @@
+%% w-bksamp.tex. Current Version: October 6, 2008
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Sample file for
+%  Wiley Book Style, Design No.: SD 001B, 7x10
+%  Wiley Book Style, Design No.: SD 004B, 6x9
+%
+%
+%  Prepared by Amy Hendrickson, TeXnology Inc.
+%  http://www.texnology.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%
+% 7x10
+%\documentclass{wileySev}
+
+% 6x9
+\documentclass{wileySix}
+
+
+\usepackage[dvipsone]{graphicx}
+
+
+% For TimesRoman Math (You must have MathTimes and MathTimes Plus
+%                        font sets, order fonts from  www.yandy.com)
+% \usepackage[mtbold,noTS1]{m-times}
+
+% For PostScript text
+\usepackage{w-bookps}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Change options here if you want:
+%%
+%% How many levels of section head would you like numbered?
+%% 0= no section numbers, 1= section, 2= subsection, 3= subsubsection
+%%==>>
+\setcounter{secnumdepth}{3}
+
+%% How many levels of section head would you like to appear in the
+%% Table of Contents?
+%% 0= chapter titles, 1= section titles, 2= subsection titles,
+%% 3= subsubsection titles.
+%%==>>
+\setcounter{tocdepth}{2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% DRAFT
+%
+% Uncomment to get double spacing between lines, current date and time
+% printed at bottom of page.
+% \draft
+% (If you want to keep tables from becoming double spaced also uncomment
+% this):
+% \renewcommand{\arraystretch}{0.6}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Demo of section head containing sample macro:
+%% To get a macro to expand correctly in a section head, with upper and
+%% lower case math, put the definition and set the box
+%% before \begin{document}, so that when it appears in the
+%% table of contents it will also work:
+
+\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+
+%% use a box to expand the macro before we put it into the section head:
+
+\newbox\sectsavebox
+\setbox\sectsavebox=\hbox{\boldmath\VT{xyz}}
+
+%%%%%%%%%%%%%%%%% End Demo
+
+
+\begin{document}
+
+\booktitle{Survey Methodology}
+\subtitle{This is the Subtitle}
+
+\authors{Robert M. Groves\\
+\affil{Universitat de les Illes Balears}
+Floyd J. Fowler, Jr.\\
+\affil{University of New Mexico}
+}
+
+\offprintinfo{Survey Methodology, Second Edition}{Robert M. Groves}
+
+%% Can use \\ if title, and edition are too wide, ie,
+%% \offprintinfo{Survey Methodology,\\ Second Edition}{Robert M. Groves}
+
+\halftitlepage
+
+\titlepage
+
+
+\begin{copyrightpage}{2007}
+Survey Methodology / Robert M. Groves . . . [et al.].
+\       p. cm.---(Wiley series in survey methodology)
+\    ``Wiley-Interscience."
+\    Includes bibliographical references and index.
+\    ISBN 0-471-48348-6 (pbk.)
+\    1. Surveys---Methodology.  2. Social
+\  sciences---Research---Statistical methods.  I. Groves, Robert M.  II. %
+Series.\\
+
+HA31.2.S873 2007
+001.4'33---dc22                                             2004044064
+\end{copyrightpage}
+
+
+
+\dedication{To my parents}
+
+\begin{contributors}
+\name{Masayki Abe,} Fujitsu Laboratories Ltd., Fujitsu Limited, Atsugi,
+Japan
+
+\name{L. A. Akers,} Center for Solid State Electronics Research, Arizona
+State University, Tempe, Arizona
+
+\name{G. H. Bernstein,} Department of Electrical and
+Computer Engineering, University of Notre Dame, Notre Dame, South Bend,
+Indiana; formerly of
+Center for Solid State Electronics Research, Arizona
+State University, Tempe, Arizona
+\end{contributors}
+
+\contentsinbrief
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+\begin{foreword}
+This is the foreword to the book.\footnote{This is a footnote\input testa}
+\end{foreword}
+
+\begin{preface}
+This is an example preface.
+This is an example preface.
+This is an example preface.
+This is an example preface.
+\section*{This is a preface section}
+This is an example of a preface.
+This is an example preface.
+This is an example preface.
+This is an example preface.
+This is an example preface.
+\prefaceauthor{R. K. Watts}
+\where{Durham, North Carolina\\
+September, 2007}
+
+\anxx{Watts\, R. K.}
+
+\end{preface}
+
+
+\acknowledgments
+From Dr.~Jay Young, consultant from Silver Spring, Maryland, I received
+the initial push to even consider writing this book. Jay was a constant
+``peer reader'' and very welcome advisor durying this year-long process.
+\anxx{Young\, Jay}
+
+To all these wonderful people I owe a deep sense of gratitude especially now
+that this project has been completed.
+\authorinitials{G. T. S.}
+
+\acronyms
+\markboth{Acronyms}{Acronyms}
+\acro{ACGIH}{American Conference of Governmental Industrial Hygienists}
+\acro{AEC}{Atomic Energy Commission}
+\acro{OSHA}{Occupational Health and Safety Commission}
+\acro{SAMA}{Scientific Apparatus Makers Association}
+
+
+
+\introduction
+The era of modern \inx{microelectronics}\inxx{microelectronics,modern}
+began in 1958 with the invention of the
+integrated circuit by J. S. Kilby\inxx{Kilby\, J. S.}
+ of Texas Instruments.\cite{kilby}
+His first chip is shown in Fig.~I. For comparison,
+Fig. I.2~shows a modern microprocessor chip, \cite{beren}.
+\anxx{Kilby\, J. S.}
+
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+
+\begin{equation}
+ABC {\cal DEF} \alpha\beta\Gamma\Delta\sum^{abc}_{def}
+\end{equation}
+
+
+\begin{figure}[ht]
+\vskip24pt
+\caption{This is an introduction figure caption.}
+\end{figure}
+
+\begin{table}[ht]
+\vskip24pt
+\caption{This is an introduction table caption and if the introduction
+caption is more than one line long it will be raggedright.
+Table caption should not end with a period
+}
+\end{table}
+
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+The situation that is described is very unusual thus
+we need to present our first set of references.
+The situation that is described is very unusual thus
+we need to present our first set of references.
+The situation that is described is very unusual thus
+we need to present our first set of references.
+The situation that is described is very unusual thus
+we need to present our first set of references.
+\begin{chapreferences*}
+\bibitem{zkilby}J. S. Kilby,
+``Invention of the Integrated Circuit,'' {\it IEEE Trans. Electron Devices,}
+{\bf ED-23,} 648 (1976).
+
+\bibitem{zhamming}R. W. Hamming,
+                 {\it Numerical Methods for Scientists and
+                 Engineers}, Chapter N-1, McGraw-Hill,
+                 New York, 1962.
+
+\bibitem{zHu}J. Lee, K. Mayaram, and C. Hu, ``A Theoretical
+               Study of Gate/Drain Offset in LDD MOSFETs''
+                     {\it IEEE Electron Device Lett.,} {\bf EDL-7}(3). 152
+                     (1986).
+
+\bibitem{zberen}A. Berenbaum,
+B. W. Colbry, D.R. Ditzel, R. D Freeman, and
+K.J. O'Connor, ``A Pipelined 32b Microprocessor with 13 kb of Cache Memory,''
+{it Int. Solid State Circuit Conf., Dig. Tech. Pap.,} p. 34 (1987).
+\end{chapreferences*}
+
+
+
+\part[Submicron Semiconductor Manufacture]
+{Submicron Semiconductor\\ Manufacture}
+
+
+\chapter[The Submicrometer Silicon MOSFET]
+{The Submicrometer\\ Silicon MOSFET}
+
+
+\prologue{The sheer volumne of answers can often stifle insight...The purpose
+of computing\inxx{computing,the purpose} is insight, not numbers.}
+{Hamming \cite{hamming}}
+
+
+
+\section{Sample Section}
+Here is some sample text.
+
+\chapter{First Edited Book Sample Chapter Title}
+\chapterauthors{G. Alvarez and R. K. Watts
+\chapteraffil{Carnegie Mellon University, Pittsburgh, Pennsylvania}
+}
+
+\section{Here is a normal section}
+Here is some text.
+
+
+\chapter{Second Edited Book Sample Chapter Title}
+\chapterauthors{George Smeal, Ph.D.\affilmark{1}, Sally Smith,
+M.D.\affilmark{2} and Stanley Kubrick\affilmark{1}
+\chapteraffil{\affilmark{1}AT\&T Bell Laboratories
+Murray Hill, New Jersey\\
+\affilmark{2}Harvard Medical School,
+Boston, Massachusetts}
+}
+
+
+\section{Here is a normal section}
+Here is some text.
+
+\subsection{This is the subsection}
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+
+
+\subsubsection{This is the subsubsection}
+Here is some text after the subsubsection.
+Here is some text after the subsubsection.
+Here is some text after the subsubsection.
+Here is some text after the subsubsection.
+
+\paragraph{This is the paragraph}
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+
+\section{Tips On Special Section Heads}
+Here are some things you can do for a special
+section head.
+
+\section[This Version of Section Head will be sent Contents]
+{Break Long Section heads\\ with double backslash}
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+
+ \section[This show how to explicitly break lines
+\string\hfill\string\break\space in Table of Contents]
+{Here is a Section Title}
+See this section head for information on how to explicitly break lines in
+table of contents.
+
+\section{How to get \lowercase{lower case} in section head: \lowercase{$p$}$H$}
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+
+
+\end{document}
+

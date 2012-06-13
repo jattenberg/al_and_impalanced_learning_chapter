@@ -1,0 +1,106 @@
+\section{Alternatives to Active Learning for Imbalanced Problems}
+\label{sec:other_settings}
+In addition to traditional label acquisition for unlabeled examples, there are other sorts of data that may be acquired at a cost for the purpose of building or improving statistical models. The intent of this section is to provide the reader with an brief overview of some alternative techniques for active data acquisition for predictive model construction in a cost-restrictive setting. We begin this setting with a discussion of class-conditional example acquisition, a paradigm related to active learning where examples are drawn from some available unlabeled pool in accordance to some predefined class-proportion. We then go on in Section~\ref{sec:feat} to touch on active feature labeling and  active dual supervision. These two paradigms attempt to to replace or supplement traditional supervised learning with class-specific associations on certain feature values. While this set of techniques require specialized models, significant generalization performance can often be achieved at a reasonable cost by leveraging explicit feature/class relationships. This is often appealing in the active setting, where it is occasionally less challenging to identify class-indicative feature values than it is to find quality training data for labeling, particularly in the imbalanced setting.
+
+\subsection{Class-Conditional Example Acquisition}
+\label{sec:acs}
+
+Imagine as an alternative to the traditional active learning problem setting, where an oracle is queried in order to assign examples to specially selected unlabeled examples, a setting where an oracle is charged with selecting exemplars from the underlaying problem space in accordance to some predefined class ratio. Consider as a motivational example, the problem of building predictive models based on data collected through an ``artificial nose'' with the intent of ``sniffing out'' explosive or hazardous chemical compounds~\cite{lomasky:ecml2007, lomaskyThesis, lomasky:nose2006}. In this setting, the reactivity of a large number of chemicals is already known, representing label-conditioned pools of available instances. However, producing these chemicals in a laboratory setting and running the resultant compound through the artificial nose may be an expensive, time-consuming process. While this problem may seem quite unique, many data acquisition tasks may be cast into a similar framework.
+
+A much more general issue in selective data acquisition is the amount of control ceded to the ``oracle'' doing the acquisition.  The work discussed so far assumes that an oracle will be queried for some specific value, and the oracle simply returns that value.  However, if the oracle is actually a person, he or she may be able to apply considerable intelligence and other resources to ``guide'' the selection.  Such guidance is especially helpful in situations where some aspect of the data is rare---where purely data-driven strategies are particularly challenged.
+
+As discussed throughout this work, in many practical settings, one class is quite rare. As an example motivating the application of class-conditional example acquisition in practice, consider building a predictive model from scratch designed to classify web pages containing a particular topic of interest. While large absolute numbers of such web pages may be present on the web, they may be outnumbered by uninteresting pages by a million to one or worse (take, for instance, the task of detecting and removing hate speech from the web~\cite{attprovkdd2010}). As discussed in Section~\ref{sec:skew}, such extremely imbalanced problem settings present a particularly insidious difficulty for traditional active learning techniques. In a setting with a $10,000:1$ class ratio, a reasonably large labeling budget could be expended with out observing a single minority example.\footnote{Note that in practice, such extremely imbalanced problem settings may actually be quite common.}
+
+Previously, we have discussed a plethora of active learning techniques specifically tuned for the high-skew setting~\cite{tomanek2009imbalance, bloodgood2009imbalance, zhu2007imbalance, Ertekin2_2007} as well as techniques where the geometry and feature-density of the problem space are explicitly included when making instance selections~\cite{zhuDensity2008, he2007rarecategory, donmez2008psd, nguyen2004preclustering, xu03representitive, cmccallum98em}, these techniques, as initially appealing as they may seem, may fail just as badly as traditional active learning techniques. Class skew and subconcept rarity discussed in Section~\ref{sec:disjunct} may be sufficient to thwart them completely~\cite{attprovkdd2010, attenberg:2010inactive}.
+
+However, in many of these extremely difficult settings, we can task humans to search the problem space for rare cases, using tools (like search engines) and possibly interacting with the base learner. Consider the motivating example of hate speech classification on the web (from above). While an active learner may experience difficulty exploring the details of this rare class, a human oracle armed with a search interface is likely to expose examples of hate speech quite easily. In fact, given the coverage of modern web search engines, a human can produce interesting examples from a much larger sample of the problem space, far beyond that which is likely to be contained in a sample pool for active learning. This is critical due to hardware-imposed constraints on the size of the pool an active learner is able to choose from---e.g., a random draw of several hundred thousand examples from the problem space may not even contain any members of the minority class or of rare disjuncts!
+
+\begin{figure}[t!]
+\begin{center}
+\epsfig{figure=plots/GuidedLearning.eps,width= \columnwidth}
+\end{center}
+\caption{Guided Learning: An oracle selecting useful examples from the instance space. }
+\label{fig:guidedlearning}
+\end{figure}
+
+Guided Learning is the general process of utilizing oracles to search the problem space, using their domain expertise to \emph{seek} instances representing the interesting regions of the problem space.
+Figure~\ref{fig:guidedlearning} presents the general guided learning setting. Here, given some interface enabling search over the domain in question, an oracle searches for interesting examples, which are either supplemented with an implicit label by the oracle, or sent for explicit labeling as a second step. These examples are then added to the training set and a model is retrained.
+Oracles can leverage their background knowledge of the problem being faced. In addition to simply being charged with the acquisition of class-specific examples, by allowing the oracle to interact with the base learner, confusing instances, those that ``fool'' the model can be sought out from the problem space and used for subsequent training in a form of human-guided uncertainty sampling. This interaction with the base learner can be extended a step further--- by allowing humans to challenge the predictive accuracy of the problem space may potentially reveal ``problem areas'', portions of the example space where the base model performs poorly that might not be revealed through traditional techniques such as cross-validation studies~\cite{attenberg:hcomp2011}.
+
+
+Guided learning, along with alternative problem settings such as that faced by the artificial nose discussed above deal with situations where an oracle is able to provide ``random'' examples in arbitrary class proportions. It now becomes interesting to consider just what this class proportion should be? This problem appears to face the inverse of the difficulties faced by active learning---labels essentially come for free, while the independent feature values are \emph{completely} unknown and must be gathered at a cost. In this setting, it becomes important to consider the question: ``In what proportion should classes be represented in a training set of a certain size?''~\cite{WeissProvost2003}.
+
+\begin{figure}[t!]
+\begin{center}
+\epsfig{figure=plots/ActiveClassSelection.eps,width=.75 \columnwidth}
+\end{center}
+\caption{Active Class Selection: Gathering instances from random class-conditioned fonts in a proportion believed to offer greatest improvement in generalization performance.}
+\label{fig:acs}
+\end{figure}
+
+
+Let's call the problem of proportioning class labels in a selection of $n$ additional training instances, ``Active Class Selection" (ACS)~\cite{lomasky:ecml2007, lomaskyThesis, lomasky:nose2006,WeissProvost2003}. This process is exemplified in Figure~\ref{fig:acs}. In this setting, there is assumed to be large, class-conditioned (virtual) pools of available instances with completely hidden feature values. At each epoch, $t$, of the ACS process, the task is to leverage the current model when selecting examples from these pools in a proportion believed to have the greatest effectiveness for improving the generalization performance of this model. The feature values for each instance are then collected and the complete instances are added to the training set. The model is reconstructed and the processes is repeated until $n$ examples are obtained (because the budget is exhausted or some other stopping criterion is met, such as a computational limit). Note that this situation can be considered to be a special case of the instance completion setting of Active Feature-Value Acquisition (cf. \cite{icdm05:melville}).  It is a degenerate special case because, prior to selection, there is no information at all about the instances other than their classes.
+
+For the specific problem at the heart of ACS, the extreme lack of information to guide selection leads to the development of unique uncertainty and utility estimators, which, in the absence of predictive covariates, require unique approximations.\footnote{In realistic settings, for instance, such as potential application for ACS, guided learning, this lack of information assumption may be softened.} While alternative approaches to active class selection have emerged, for thematic clarity, uncertainty-based and expected utility-based approaches will be presented first. Note that because effective classification requires that both sides of a prediction boundary be represented, unlike typical active learning techniques, active class selection typically \textit{samples} classes from their respective score distributions~\cite{Saar-tsechansky01activelearning,ml:saar-tsechansky04}.
+
+\subsubsection{Uncertainty-based approaches}
+This family of techniques for performing active class selection is based on the volatility in the predictions made about certain classes---those classes whose cross-validated predictions are subject to the most change between successive epochs of instance selection are likely to be based upon an uncertain predictor, and amenable to refinement by the incorporation of additional training data~\cite{lomasky:ecml2007, lomasky:nose2006}. Analogous to the case of more traditional uncertainty-based data acquisition, several heuristics have been devised to capture the notion of variability.
+
+One measure of the uncertainty of a learned model is how volatile its predictive performance is in the face of new training data.  Take a  typical learning curve, for instance, those presented in  Figure~\ref{eightgraphs}. Notice that the modeling is much more volatile at the left side of the figure, showing large changes in generalization performance for the same amount of new training data.
+We can think that as the predictor gains knowledge of the problem space, it tends to solidify in the face of data, exhibiting less change and greater certainty. For ACS, we might wonder if the learning curves will be equally steep regardless of the class of the training data~\cite{lomasky:ecml2007, lomaskyThesis, lomasky:nose2006}.
+With this in mind, we can select instances at epoch $t$ from the classes in proportion to their improvements in accuracy at $t-1$ and $t-2$. For example, we could use cross-validation to estimate the generalization performance of the classifier with respect to each class, $\mathcal{A}(c)$; class $c$ can then be sampled according to:
+
+ $$p^t_{\mathcal{A}}(c) \propto \frac{\max \left\{ 0,\mathcal{A}^{t-1}(c) - \mathcal{A}^{t-2}(c) \right\}}{\sum_{c'} \max \left\{ 0,\mathcal{A}^{t-1}(c') - \mathcal{A}^{t-2}(c') \right\}},$$
+
+Alternatively, we could consider general volatility in class members' predicted labels, beyond improvement in the model's ability to predict the class. Again, by using cross-validated predictions at successive epochs, it is possible to isolate members of each class, and observe changes in the predicted class for each instance. For example, when the predicted label of a given instance changes between successive epochs, we can deem the instance to have been \emph{redistricted}~\cite{lomasky:ecml2007, lomaskyThesis, lomasky:nose2006}. Again considering the level of volatility in a model's predictions to be a measurement of uncertainty, we can sample classes at epoch $t$ according to each classes' proportional measure of redistricting:
+
+$$p^t_{\mathcal{R}}(c) \propto \frac{\frac{1}{|c|}\sum_{x \in c} \mathbb{I}(f^{t-1}(x) \ne f^{t-2}(x))  }{\sum_{c'} \frac{1}{|c'|}\sum_{x \in c'} \mathbb{I}(f^{t-1}(x) \ne f^{t-2}(x)) },$$
+
+\noindent where $\mathbb{I}(\cdot)$ is an indicator function taking the value of $1$ if its argument is true and $0$ otherwise. $f^{t-1}(x)$ and $f^{t-2}(x)$ are the predicted labels for instance $x$ from the models trained at epoch $t-1$ and $t-2$, respectively~\cite{lomasky:ecml2007, lomaskyThesis, lomasky:nose2006}.\\
+
+\subsubsection{Expected Class Utility}
+The previously described active class selection heuristics are reliant on the assumption that adding examples belonging to a particular class will improve the predictive accuracy with respect to that class. This does not directly estimate the utility of adding members of a particular class to a model's overall performance. Instead, it may be preferable to select classes whose instances' presence in the training set will reduce a model's misclassification cost by the greatest amount in expectation.
+
+Let $\mbox{cost}(c_i | c_j)$ be the cost of predicting $c_i$ on an instance $x$ whose true label is $c_j$. Then the expected empirical misclassification cost over a sample dataset, $\mathbb{D}$, is:
+
+$$ \hat{R} = \frac{1}{|\mathbb{D}|} \sum_{x \in \mathbb{D}} \sum_i \hat{P}(c_i | x)\mbox{cost}(c_i | y),$$
+
+%\josh{perhaps re-word these equations so that it uses the ``E'' notation, taking expectation over the examples in $\mathbb{D}$}
+
+\noindent Where $y$ is the correct class for a given $x$. Typically in the active class selection setting, this expectation would be taken over the training set (e.g. $\mathbb{D} = T$), preferably using cross-validation. In order to reduce this risk, we would like to select examples from class $c$ leading to the greatest reduction in this expected risk~\cite{lomaskyThesis}.
+
+Consider a predictive model $\hat{P}^{T \cup c}(\cdot | x)$, a model built on the training set, $T$, supplemented with an arbitrary example belonging to class $c$. Given the opportunity to choose an additional class-representative example to the training pool, we would like to select the class that reduces expected risk by the greatest amount:
+
+$$ \bar{c} = \arg \max_c U(c),$$
+
+\noindent Where
+
+$$ U(c) = \frac{1}{|\mathbb{D}|} \sum_{x \in \mathbb{D}} \sum_i \hat{P}^T(c_i | x)\mbox{cost}(c_i | y) - \frac{1}{|\mathbb{D}|} \sum_{x \in \mathbb{D}} \sum_i \hat{P}^{T \cup c}(c_i | x)\mbox{cost}(c_i | y).  $$
+
+Of course the benefit of adding additional examples on a test dataset is unknown. Furthermore, the impact of a particular class's examples may vary depending on the feature values of particular instances. In order to cope with these issues, we can estimate via cross-validation on the training set. Using sampling, we can try various class-conditional additions and compute the expected benefit of a class across that class's representatives in $T$, assessed on the testing folds. The above utility then becomes:
+
+$$\hat{U}(c) = E_{x \in c} \left[ \frac{1}{|\mathbb{D}|} \sum_{x \in \mathbb{D}} \sum_i \hat{P}^T(c_i | x)\mbox{cost}(c_i | y) - \frac{1}{|\mathbb{D}|} \sum_{x \in \mathbb{D}} \sum_i \hat{P}^{T \cup c}(c_i | x)\mbox{cost}(c_i | y)  \right]. $$\\
+
+
+Note that it is often preferred to add examples in batch. In this case, we may wish to sample from the classes in proportion to their respective utilities:
+
+$$ p^t_{\hat{U}}(c) \propto \frac{\hat{U}(c)}{\sum_{c'} \hat{U}(c')}. $$
+
+Further, diverse class-conditional acquisition costs can be incorporated, utilizing $\frac{\hat{U}(c)}{\omega_c}$ in place of $\hat{U}(c)$, where $\omega_c$ is the (expected) cost of acquiring the feature vector of an example in class $c$.\\
+
+
+\subsubsection{ Alternative Approaches to ACS}
+In addition to uncertainty-based and utility-based techniques, there are several alternative techniques for performing active class selection. Motivated by empirical results showing that barring any domain-specific information, when collecting examples for a training set of size $n$, a balanced class distribution tends to offer reasonable AUC on test data~\cite{WeissProvost2001, WeissProvost2003}, a reasonable baseline approach to active class selection is simply to select classes in balanced proportion.
+
+%This is not quite the same as typical strategies for learning in skewed settings, including over-sampling the minority class and under-sampling the majority class~\cite{chawlaSMOTE2002, LiuUndersampling2009}, because here the goal is to have the right proportion for a given training set size.
+
+Search strategies may alternately be employed in order to reveal the most effective class ratio at each epoch. Utilizing a nested cross-validation on the training set, the space of class ratios can be explored, with the most favorable ratio being utilized at each epoch.
+Note that it is not possible to explore all possible class ratios in all epochs, without eventually spending too much on one class or another.
+Thus, as we approach $n$ we can narrow the range of class ratios,
+assuming that there is a problem-optimal class ratio that will become more apparent as we obtain more data~\cite{WeissProvost2003}.
+
+It should be noted that many techniques employed for building classification models assume an identical or similar training and test distribution. Violating this assumption may lead to biased predictions on test data where classes preferentially represented in the training data are predicted more frequently. In particular increasing the prior probability of a class increases the posterior probability of the class, moving the classification boundary for that class so that more cases are classified into that class"~\cite{sasguide,provost2000}. Thus in settings where instances are selected specifically in proportions different from those seen in the wild, posterior probability estimates should be properly calibrated to be aligned with the test data, if possible~\cite{provost2000,Elkan01thefoundations,WeissProvost2003}.
+
+
+Prior work has repeatedly demonstrated the benefits of performing active class selection beyond simply selecting random examples from an example pool for acquisition or simply using uniformly balanced selection. However, in many cases, simply casting what would typically be an active learning problem into an ACS problem, and selecting examples uniformly amongst the classes can provide results far better than what would be possible with active learning alone. For instance, the learning curves presented in Figure~\ref{fig:guidedvary_skew} compare such uniform guided learning with active learning and simple random selection. Providing the model with an essentially random but class-balanced training set far exceeds the generalization performance possible for an active learning strategy or by random selection once the class skew becomes substantial. More intelligent ACS strategies may make this difference even more pronounced, and should be considered if the development effort associated with incorporating such strategies would be outweighed by the savings coming from reduced data acquisition costs.
+

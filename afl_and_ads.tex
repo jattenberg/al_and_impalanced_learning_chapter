@@ -1,0 +1,70 @@
+
+\subsection{Feature-Based Learning and Active Dual Supervision}
+\label{sec:feat}
+
+
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+
+
+While traditional supervised learning is by far the most prevalent classification paradigm encountered in the research literature, it is not the only approach for incorporating human knowledge into a predictive system. By leveraging, for instance, class associations with certain feature values, predictive systems can be trained that offer potentially excellent generalization performance without requiring the assignment of class labels to individual instances. Consider, the example domain of predicting the sentiment of movie reviews. In this context it is clear that the presence of words like ``amazing'' and ``thrilling'' carry an association with the positive class, while terms like ``boring'' and ''disappointing'' evoke negative sentiment~\cite{attenberg:ecml10}. Gathering this kind of annotation leverages an oracle's prior experience with the class polarity of certain feature values--- in this case, the emotion that certain terms tend to evoke. The systematic selection of feature-values for labeling by a machine learning system is referred to as Active Feature-Value Labeling,\footnote{For brevity, this is often shortened to Active Feature Labeling, a moniker that is best suited for domains with binary features} (AFL). The general setting where class associations are actively sought for both feature-values and particular examples is known as Active Dual Supervisions (ADS). The process of selection for AFL and ADS can be seen in Figures~\ref{fig:afl} and~\ref{fig:ads} respectively.
+
+\begin{figure}[t!]
+\begin{center}
+\epsfig{figure=plots/FeatureLabeling.eps,width= \columnwidth}
+\end{center}
+\caption{Active Feature-Value Labeling: Selecting feature-values for association with a certain class-polarity }
+\label{fig:afl}
+\end{figure}
+
+\begin{figure}[t!]
+\begin{center}
+\epsfig{figure=plots/DualSupervision.eps,width= \columnwidth}
+\end{center}
+\caption{Active Dual Supervision: Simultaneous acquisition of label information for both feature-values and instances}
+\label{fig:ads}
+\end{figure}
+
+Of course, incorporating the class polarities associated with certain feature-values typically requires specialized models who's functional form has been designed to leverage feature-based background knowledge. While a survey of models for incorporating such feature-value/class polarities is beyond the scope of this chapter, an interested reader is advised to seek any number of related papers (cf. \cite{melville:kdd09, schapire:icml02,wu:kdd04,liu:aaai04, dayanik:sigir06,kunapuli2010:knowledge, druck:sigir08}). However, while sophisticated models of this type have been devised, practical, yet very simple solutions are easy to imagine. Consider at the most basic extreme class assignment rules, where the presence of certain feature-values (or combinations of feature-values) connect an example with a particular class. A rudimentary ``dual'' model can also be constructed by simply averaging the class predictions of a traditional supervised machine learning model with a model based on feature-value/class relationships.
+
+Given the option of incorporating prior knowledge associated with certain feature-values into the predictive behavior of a model, the question then becomes: \emph{which feature examples should be selected for labeling?} Initially, this may seem to be a deflection, replacing the search for useful information of one kind with another. However, there are several reasons why seeking feature-values to ``label'' may be preferred to labeling examples. The most obvious reason for selecting feature-values for labeling is that traditional is often ``slow''. It may take many labeled movie reviews to teach the model that ``amazing'' has a positive association, and not the other uninformative terms that just happen to occur in positive reviews by coincidence. In this way, the cold-start problem faced in active learning\footnote{Recall Section~\ref{sec:cold}} may be less acute in AFL and ADS--- while complex feature/class relationships may be difficult to achieve using AFL, reasonable generalization performance is often achievable with few requests to an oracle. Second, the labor costs associated with assigning a class polarity to a certain feature value is often quite low--- it is easy for a human to associate the term ``terrible'' with negative movie reviews, while labeling one particular movie review as positive or negative requires reading the entire document. Note, that of course not every term is polar; in the ongoing example of movie reviews, it is easy to imagine that a few terms have a  natural association with the positive or negative class, while most terms on their own don't have such a polarity. However, this imbalance between polar and non-polar feature values is often far less acute than the imbalance between classes in many machine learning problems. A problem domain with a class imbalance of $1,000,000:1$ may still have one in ten features exhibit some meaningful class association. Perhaps even more importantly, the ratio between positively and negatively linked feature-values (for instance) may be far more balanced than the ratio between those classes in the wild. In fact, there is not necessarily a relationship between the base rate and the ratio of strongly identifiable positively and negatively associated feature values. While selecting useful feature-values in practice is still often a challenging problem, experience has shown that it is often more informative to select random features for labeling than random examples. More intelligent selection heuristics can make this preference for AFL and ADS even stronger.
+
+Again, giving a thorough survey of selection heuristics for performing AFL  is beyond the scope of this chapter. However, we will provide the reader with a brief  overview of the techniques typically employed for such tasks. As in many selective data acquisition tasks for machine learning, we see two common themes: uncertainty-based selection and expected-utility-based approaches. Below we will briefly present some more popular techniques for AFL delineated accordingly. We will then briefly discuss techniques for ADS, selecting features and examples for labeling simultaneously.
+
+
+\subsubsection{Uncertainty-based AFL}
+\label{sec:usafl}
+By far the most prevalent class of active learning heuristics, uncertainty-based approaches do not have a direct analogue to the selection problem faced in ADS; feature-value/class associations factor quite differently into the formation and training of machine learning models than more traditional example labels. Nonetheless, thematically similar approaches to the ADS problem have been developed, where features are selected to labeling according to some notion of stability within the current model. As in traditional uncertainty selection in active learning, the primary difference amongst these uncertainty-based ADS techniques is the manner by which feature uncertainty is estimated. In the simplest case, using a linear model, the coefficients on particular feature values may be interpreted as a measure of uncertainty, with lower coefficient magnitude corresponding to a greater degree of uncertainty~\cite{sindhwani:icml09}. The Na\'ive Bayes-like model used presented in~\cite{melville:kdd09} presents a more appealing option--- feature-value label uncertainty can be measured by looking at the magnitude of the log-odds of the feature-value likelihoods: $\left| \log \frac{p(f | +)}{p(f | -)}  \right|$ for feature-value $f$ and classes $+$ and $-$. Again, a smaller value corresponds to increased uncertainty.
+
+A range of other techniques for Uncertainty-based AFL exist. Through the creation of one-term pseudo-documents Godbole et al~\cite{godbole04} coerce the notion of feature label uncertainty into a more traditional instance uncertainty framework for text classification tasks. By incorporating label information on each feature-value with unlabeled examples, Druck et al.~\cite{druck:sigir08} create a corresponding \textit{Generalized Expectation} term that rates the model's predicted class distribution
+conditioned on the presence of the particular feature. This rating penalizes these predicted class distributions according to their KL-divergence from reference distributions constructed using labeled features. Similarly, Liang et al.~\cite{liang:icml09} learn from labeled examples and actively selected constraints in the form of expectations with some associated noise from particular examples.  Druck et al.~\cite{druk:EMNLP:2009} analyze several uncertainty-based selection techniques for gathering feature labels when training conditional random fields. Finding that the total uncertainty (measured as the sum of the marginal entropies) tends to favor more frequent features. As a remedy, they propose an uncertainty scheme where the mean uncertainty is weighted by the log of the counts of the associated feature values.
+
+Interestingly, even for reasonable uncertainty estimators, feature/class uncertainty may not be a desirable criterion for selection. Consider the above discussion regarding the preponderance of uninformative features. Clearly, in the case of document classification, terms like ``of'' and ``the'' will seldom have any class polarity. At the same time, these terms are likely to have a high degree of uncertainty, leaving uncertainty-based approaches to perform poorly in practice. Preferring to select features based on \emph{certainty}, that is, selecting those features with the least uncertainty seems to work much better in practice~\cite{sindhwani:icml09, melville:naacl09}.
+
+
+
+\subsubsection{Expected Utility-based AFL}
+\label{sec:euafl}
+As with traditional uncertainty (and certainty) sampling for active learning,  the query corresponding to the greatest level of uncertainty my not necessarily be the query offering the greatest level of information to the model. This is particularly true in noisy or complex environments. Instead of using a heuristic to estimate the information value of a particular feature label, it is possible to estimate this quantity directly. Let $q$ enumerate over all possible feature-values that may be queried for labels. We can estimate the expected utility of such a query by: $EU(q) = \sum_{k=1}^{K}{P(q=c_k)\frac{\mathcal{U}(q=c_k)}{\omega_q}}$, where $P(q=c_k)$ is the probability of the instance or feature queried being associated with class $c_k$, $\omega_q$ is the cost of query $q$ and $\mathcal{U}$ is some measure of the utility of $q$.\footnote{For instance, cross-validated accuracy or log-gain may be used.} This results in the decision-theoretic optimal policy, which is to ask for feature labels which, once incorporated into the data, will result in the highest increase in classification performance in \emph{expectation}~\cite{attenberg:ecml10, melville:naacl09}.
+
+
+\subsubsection{Active Dual Supervision}
+\label{sec:ads}
+
+Active dual supervision is concerned with situations where it is possible to query an oracle for labels associated with both feature-values and examples. Even though such a paradigm is concerned with the simultaneous acquisition of feature and example labels, the simplest approach is treating each acquisition problem separately, and then mixing selections somehow. Active interleaving is performs a separate (un)certinaty-based ordering on features and on examples, and chooses selections from the top of each ordering according to some predefined proportion. The different nature of feature-value and example uncertainty values lead to incompatible quantities existing on different scales, preventing a single, unified ordering. However, expected utility can be used to compute a single unified metric encapsulating the value of both types of data acquisition. As above, we are estimating the utility of a certain feature of example query $q$ as: $EU(q) = \sum_{k=1}^{K}{P(q=c_k)\frac{\mathcal{U}(q=c_k)}{\omega_q}}$. Using a single utility function for both features and examples and incorporating label acquisition costs, costs and benefits of the different types of acquisition can be optimized directly~\cite{attenberg:ecml10}.
+
+
+
+\drop{
+Active feature labeling and active dual supervision are demonstrated to be effective techniques for reducing the total annotation effort required for building effective predictive models (see Section~\ref{sec:ads}). However, while appropriately chosen feature labels may facilitate the construction of models able to effectively discriminate between classes, as with active learning, particularly difficult situations may stymie active feature selection and active dual supervision, wasting many queries on uninformative queries, simply because the base model has very little knowledge of the problem space~\cite{attenberg:GL:blicml:2010}. However, just as in guided learning, human oracles may be requested to \emph{seek} polarity labels for those features thought to most effectively discern between the classes. This process may be seen in Figure~\ref{fig:gfl}. Note that this process may be seamlessly incorporated with guided feature selection, adding new features and their associated label simultaneously. In the case of text classification, this may involve adding a term or phrase not originally considered, and assigning to that phrase a class polarity. This guided feature labeling has been demonstrated to offer much greater effectiveness than active feature labeling in ``difficult'' classification problems~\cite{attenberg:GL:blicml:2010}.
+
+\begin{figure}[t!]
+\begin{center}
+\epsfig{figure=plots/GuidedFeatureLabeling.eps,width= \columnwidth}
+\end{center}
+\caption{Guided Feature Labeling: Tasking oracles with finding features and their associated class polarity believed to be best able to discriminate between classes. }
+\label{fig:gfl}
+\end{figure}
+} 

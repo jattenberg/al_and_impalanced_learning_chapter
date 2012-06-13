@@ -1,0 +1,153 @@
+%% w-bksamp.tex. Current Version: October 6, 2008
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Sample file for
+%  Wiley Book Style, Design No.: SD 001B, 7x10
+%  Wiley Book Style, Design No.: SD 004B, 6x9
+%
+%
+%  Prepared by Amy Hendrickson, TeXnology Inc.
+%  http://www.texnology.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%
+% 7x10
+%\documentclass{wileySev}
+
+% 6x9
+\documentclass{wileySix}
+
+
+%\usepackage[dvipsone]{graphicx}
+\usepackage{verbatim}
+
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{slashbox}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{wrapfig}
+
+
+\usepackage{color}
+
+
+% For TimesRoman Math (You must have MathTimes and MathTimes Plus
+%                        font sets, order fonts from  www.yandy.com)
+% \usepackage[mtbold,noTS1]{m-times}
+
+% For PostScript text
+% \usepackage{w-bookps}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Change options here if you want:
+%%
+%% How many levels of section head would you like numbered?
+%% 0= no section numbers, 1= section, 2= subsection, 3= subsubsection
+%%==>>
+\setcounter{secnumdepth}{8}
+
+%% How many levels of section head would you like to appear in the
+%% Table of Contents?
+%% 0= chapter titles, 1= section titles, 2= subsection titles,
+%% 3= subsubsection titles.
+%%==>>
+\setcounter{tocdepth}{2}
+
+\setcounter{chapter}{8}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% DRAFT
+%
+% Uncomment to get double spacing between lines, current date and time
+% printed at bottom of page.
+\draft
+
+% (If you want to keep tables from becoming double spaced also uncomment
+% this):
+% \renewcommand{\arraystretch}{0.6}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Demo of section head containing sample macro:
+%% To get a macro to expand correctly in a section head, with upper and
+%% lower case math, put the definition and set the box
+%% before \begin{document}, so that when it appears in the
+%% table of contents it will also work:
+
+\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+
+%% use a box to expand the macro before we put it into the section head:
+
+\newbox\sectsavebox
+\setbox\sectsavebox=\hbox{\boldmath\VT{xyz}}
+
+%%%%%%%%%%%%%%%%% End Demo
+
+
+\begin{document}
+
+\offprintinfo{Reinforcement Learning and Approximate Dynamic Programming for Feedback Control,}{Frank L. Lewis and Derong Liu}
+
+\chapter{Nonstationary Stream Data Learning with Imbalanced Class Distribution}
+\chapterauthors{Sheng Chen$^\ast$ and Haibo He$^\dag$
+\chapteraffil{$^\ast$ Merrill Lynch, Bank of America; $\dag$ University of Rhode Island.}
+}
+% \footnote{dfdsdsf}
+
+\noindent\textbf{Abstract}
+
+Please include an Abstract for your chapter. Here is just an example...
+
+The ubiquitous imbalanced class distribution occurred in real world data sets has
+excited considerable interests in the study of imbalanced learning. However it
+is still a relatively uncharted area when it is nonstationary data stream with imbalanced
+class distribution that needs to be processed. Difficulties in this case
+are generally two-fold. First, dynamically structured learning framework is required
+to catch up with the evolution of unstable class concepts, i.e., concept drifts.
+Second, imbalanced class distribution over data stream demands a mechanism to
+intensify the underrepresented class concepts for improved overall performance.
+For instance, in order to design an intelligent spam filtering system, one needs
+to not only make the system to be capable of self-tuning its learning parameters
+to keep pace with the rapid evolution of spam mail patterns, but also the system
+has to tackle the fundamental problem that in some situations normal emails
+are severely outnumbered by spam emails, but it is so much more expensive to
+misclassify a normal email into spam, e.g., confirmation of a business contract,
+than the other way around. This chapter introduces learning algorithms that were
+specifically proposed to tackle the problem of learning from nonstationary data set
+with imbalanced class distribution. System-level principle and framework of these
+methods are described in algorithmic level, the soundness of which are furthered
+validated through theoretical analysis as well as simulations on both synthetic and
+real-world benchmarks with varied level of imbalanced ratio and noise level.
+
+\section{Introduction}
+% no \IEEEPARstart
+Learning from data stream has been featured in many practical applications such as network traffic
+monitoring and credit fraud identification \cite{Grossberg:1988}...
+
+This is just an example -- please add all your contents here...
+
+
+\section{sampling approaches}
+
+\subsection{under-sampling}
+
+\section{Acknowledgement}
+
+For any acknowledgement (such as grants, etc.), please add them here...
+
+
+\bibliographystyle{ieeetr}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{Ch9_reference}
+
+\end{document}
+

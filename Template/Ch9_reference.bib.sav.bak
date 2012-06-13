@@ -1,0 +1,1102 @@
+
+@ARTICLE{1Werbos:2009,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Intelligence in The Brain: A Theory of How It Works And How to Build It},
+  JOURNAL =      {Neural Networks},
+  YEAR =         {2009},
+  volumn =       {22},
+  pages =        {200-212},
+}
+
+
+@INPROCEEDINGS{2Werbos:2007,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Using {ADP} to Understand and Replicate Brain Intelligence: the Next Level Design},
+  BOOKTITLE =    {{IEEE Int. Symposium on Approximate Dynamic Programming and Reinforcement Learning}},
+  YEAR =         {2007},
+  pages =        {209-216},
+
+}
+
+
+@BOOK{Grossberg:1988,
+  AUTHOR =       {S. Grossberg},
+  TITLE =        {Neural Networks and Natural Intelligence},
+  PUBLISHER =    {MIT Press},
+  YEAR =         {1988},
+  address =      {Cambridge, MA},
+
+}
+
+@INPROCEEDINGS{8Werbos:1990,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Backpropagation Through Time: What It Does and How to Do It},
+  BOOKTITLE =    {{Proc. IEEE}},
+  YEAR =         {1990},
+
+  volume =       {78},
+  number =       {10},
+
+  pages =        {1550-1560},
+
+}
+
+@BOOK{16Werbos:1994,
+  AUTHOR =       {P. J. Werbos},
+
+  TITLE =        {The Roots of Backpropagation: From Ordered Derivatives to Neural Networks and Political Forecasting},
+  PUBLISHER =    {Wiley-Interscience},
+  YEAR =         {1994},
+
+}
+
+
+@INBOOK{9Werbos:1995,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {M. A. Arbib},
+  TITLE =        {The Handbook of Brain Theory and Neural Netw.},
+  CHAPTER =      {{Backpropagation: Basics and New Developments}},
+  pages =        {134-139},
+  PUBLISHER =    {MIT Press},
+  YEAR =         {1995},
+  address =      {Cambridge MA},
+
+}
+
+@INPROCEEDINGS{11Werbos:1989,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Backpropagation and Neurocontrol: A Review and Prospectus},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {1989},
+  volume =       {1},
+  pages =        {209-216},
+
+}
+
+@INBOOK{Hawkins:2004,
+  AUTHOR =       {J. Hawkins, and S. Blakeslee},
+  TITLE =        {On Intelligence},
+  PUBLISHER =    {Times Books},
+  YEAR =         {2004},
+}
+
+
+@ARTICLE{Hawkins:2007,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Why Can't a Computer Be More Like A Brain?},
+  JOURNAL =      {IEEE Spectrum},
+  YEAR =         {2007},
+  volumn =       {44},
+  pages =        {20-26},
+}
+
+@INBOOK{Brooks:2002,
+  AUTHOR =       {R. A. Brooks},
+  TITLE =        {Flesh and Machines: How Robots Will Change Us},
+  PUBLISHER =    {Pantheon},
+  YEAR =         {2002},
+}
+
+@INBOOK{Pfeifer:2006,
+  AUTHOR =       {R. Pfeifer, and J. C. Bongard},
+  TITLE =        {How the Body Shapes the Way We Think - A New View of Intelligence},
+  PUBLISHER =    {MIT Press},
+  YEAR =         {2006},
+}
+
+@INPROCEEDINGS{Starzyk:2006,
+  AUTHOR =       {J. A. Starzyk, and Y. Liu, and H. He},
+  TITLE =        {Challenges of Embodied Intelligence},
+  BOOKTITLE =    {Proc. Int. Conf. Signals and Electronic Syst. (ICSES'06)},
+  YEAR =         {2006},
+  pages =        {534 - 541},
+
+}
+
+
+@BOOK{25Sutton:1998,
+  AUTHOR =       {R. S. Sutton, and A. G. Barto},
+
+  TITLE =        {Reinforcement Learning: An Introduction},
+  PUBLISHER =    {MIT Press},
+  YEAR =         {1998},
+  address =      {Cambridge, MA},
+}
+
+@INPROCEEDINGS{26Geramifard:2006,
+  AUTHOR =       {A. Geramifard, and M. Bowling, and R. S. Sutton},
+  TITLE =        {Incremental Least-Squares Temporal Difference Learning},
+  BOOKTITLE =    {{Proc. Twenty-First National Conf. Artificial Intelligence}},
+  YEAR =         {2006},
+  pages =        {356-361},
+
+}
+
+@INPROCEEDINGS{27Rafols:2005,
+  AUTHOR =       {E. J. Rafols, and M. B. Ring, and R. S. Sutton, and B. Tanner},
+  TITLE =        {Using Predictive Representations to
+Improve Generalization in Reinforcement Learning},
+  BOOKTITLE =    {{Proc. Twenty-First National Conf. Artificial Intelligence}},
+  YEAR =         {2005},
+  pages =        {835-840},
+
+}
+
+@ARTICLE{28Kaelbling:1996,
+  AUTHOR =       {L. P. Kaelbling, and M. L. Littman, and A. W. Moore},
+  TITLE =        {Reinforcement Learning: A Survey},
+  JOURNAL =      {Journal of Artificial Intelligence Research},
+  YEAR =         {1996},
+  volume =       {4},
+  pages =        {237-285},
+
+}
+
+
+@INBOOK{29Werbos:1992,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {D. A. White, and D. A. Sofge},
+  TITLE =        {Handbook of Intelligent Control},
+  CHAPTER =      {{Approximate Dynamic Programming for Real Time Control and Neural Modeling}},
+  pages =        {493-525},
+  YEAR =         {1992},
+  PUBLISHER =    {Van Nostrand},
+  address =      {New York},
+
+}
+
+@BOOK{30Si:2004,
+  AUTHOR =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+
+}
+
+@ARTICLE{31Prokhorov:1997,
+  AUTHOR =       {D. V. Prokhorov, and D. C. Wunsch},
+  TITLE =        {Adaptive Critic Designs},
+  JOURNAL =      {IEEE Trans. on Neural Netw.},
+  YEAR =         {1997},
+  volume =       {8},
+  number =       {5},
+  pages =        {997-1007},
+
+}
+
+@BOOK{32White:1992,
+  AUTHOR =       {D. A. White, and D. A. Sofge},
+
+  TITLE =        {Handbook of Intelligent Control},
+
+  YEAR =         {1992},
+
+  PUBLISHER =    {Van Nostrand},
+
+  address =      {New York},
+
+}
+
+
+@BOOK{33Bertsekas:1996,
+  AUTHOR =       {D. P. Bertsekas, and J. Tsitsiklis},
+
+  TITLE =        {Neuro-Dynamic Programming},
+
+  YEAR =         {1996},
+
+  PUBLISHER =    {Athena Scientific},
+
+}
+
+@BOOK{Powell:2007,
+  AUTHOR =       {W. B. Powell},
+
+  TITLE =        {Approximate Dynamic Programming: Solving the Curses of Dimensionality},
+
+  YEAR =         {2007},
+
+  PUBLISHER =    {Wiley-Interscience},
+
+}
+
+@ARTICLE{38Balakrishnan:2008,
+  AUTHOR =       {S. N. Balakrishnan, and J. Ding, and F. L. Lewis},
+  TITLE =        {Issues on Stability of ADP Feedback Controllers for Dynamical Systems},
+  JOURNAL =      {IEEE Trans. on Syst. Man, Cybern., Part B, special issue on ADP/RL, invited survey paper},
+  YEAR =         {2008},
+  volume =       {38},
+  number =       {4},
+  pages =        {913-917},
+
+}
+
+
+@ARTICLE{36Wang:2009,
+  AUTHOR =       {F. Y. Wang, and H. Zhang, and D. Liu},
+  TITLE =        {Adaptive Dynamic Programming: An Introduction},
+  JOURNAL =      {IEEE Comput. Intel. Mag.},
+  YEAR =         {2009},
+  volume =       {4},
+  number =       {2},
+  pages =        {39-47},
+}
+
+@ARTICLE{zhangluoliu:2009,
+    author = {H. G. Zhang, and Y. H. Luo, and D. Liu},
+    title = {Neural-network-based near-optimal control for a class of discrete-time affine nonlinear systems with control constraints},
+    journal = {IEEE Transactions on Neural Networks},
+    year = {2009},
+   volume={20},
+    number = {9},
+    pages={1490-1503},
+}
+
+
+@ARTICLE{wangjinliuwei:2011,
+    author = {F. Y. Wang, and N. Jin, and D. Liu, and Q. Wei},
+    title = {Adaptive Dynamic Programming for Finite-Horizon Optimal Control of Discrete-Time Nonlinear Systems with $\varepsilon$-Error Bound},
+    journal = {IEEE Transactions on Neural Networks},
+    year = {2011},
+   volume={22},
+    number = {1},
+    pages={24-36},
+}
+
+@ARTICLE{liuzhangzhang:2005,
+    author = {D. Liu, and Y. Zhang, and H. G. Zhang},
+    title = {A self-learning call admission control scheme for CDMA cellular networks},
+    journal = {IEEE Transactions on Neural Networks},
+    year = {2005},
+   volume={16},
+    number = {5},
+    pages={1219-1228},
+}
+
+@ARTICLE{fuhezhou:2011,
+    author = {J. Fu, and H. He, and X. Zhou},
+    title = {Adaptive Learning and Control for MIMO System Based On Adaptive Dynamic Programming},
+    journal = {IEEE Transactions on Neural Networks},
+    year = {2011},
+   volume={22},
+    number = {7},
+    pages={1133-1148},
+}
+
+@BOOK{43Bellman:1957,
+  AUTHOR =       {R. E. Bellman},
+
+  TITLE =        {Dynamic Programming},
+  PUBLISHER =    {Princeton University Press},
+  YEAR =         {1957},
+
+  address =      {Princeton, NJ},
+
+}
+
+@ARTICLE{zhangweiluo:2008,
+    author = {H. G. Zhang, and Q. L. Wei, and Y. H. Luo},
+    title = {A novel infinite-time optimal tracking control scheme for a class of discrete-time nonlinear systems via the greedy HDP iteration algorithm},
+    journal = {IEEE Transactions on System, Man and Cybernetics, Part B},
+    year = {2008},
+   volume={38},
+    number = {4},
+    pages={937-942},
+}
+
+@ARTICLE{weizhangliuzhao:2010,
+    author = {Q. L. Wei, and H. G. Zhang, and D. Liu, and Y. Zhao},
+    title = {An optimal control scheme for a class of discrete-time nonlinear systems with time delays using adaptive dynamic programming},
+    journal = {ACTA Automatica Sinica},
+    year = {2010},
+   volume={36},
+    number = {1},
+    pages={121-129},
+}
+
+@ARTICLE{songzhangweilup:2008,
+    author = {R. Z. Song, and H. G. Zhang, and Q. L. Wei, and Y. H. Luo},
+    title = {Optimal control laws for time-delay systems with saturating actuators based on heuristic dynamic programming},
+    journal = {Neurocomputing},
+    year = {2010},
+   volume={73},
+    number = {16-18},
+    pages={3020-3027},
+}
+
+
+@ARTICLE{weizhangcui:2009,
+    author = {Q. L. Wei, and H. G. Zhang, and L. L. Cui},
+    title = {Data-based optimal control for discrete-time zero-sum games of 2-d systems using adaptive critic designs},
+    journal = {ACTA Automatica Sinica},
+    year = {2009},
+   volume={35},
+    number = {6},
+    pages={682-692},
+}
+
+@ARTICLE{weizhangcui:2009,
+    author = {Q. L. Wei, and H. G. Zhang, and L. L. Cui},
+    title = {Data-based optimal control for discrete-time zero-sum games of 2-d systems using adaptive critic designs},
+    journal = {ACTA Automatica Sinica},
+    year = {2009},
+   volume={35},
+    number = {6},
+    pages={682-692},
+}
+
+@ARTICLE{zhangweiliu:2011,
+    author = {H. G. Zhang, and Q. L. Wei, and D. Liu},
+    title = {An iterative approximate dynamic programming method to solve for a class of nonlinear zero-sum differential games},
+    journal = {Automatica},
+    year = {2011},
+   volume={47},
+    number = {1},
+    pages={207-214},
+}
+
+@ARTICLE{liujavaheriankovlenko:2008,
+    author = {D. Liu, and H. Javaherian, and O. Kovalenko, and T. Huang},
+    title = {Adaptive critic learning techniques for engine torque and air-fuel ratio control},
+    journal = {IEEE Transactions on System, Man and Cybernetics, Part B},
+    year = {2008},
+   volume={38},
+    number = {4},
+    pages={988-993},
+}
+
+@ARTICLE{liujavaheriankovlenko:2008,
+    author = {H. He, and Z. Ni, and J. Fu},
+    title = {A Three-Network Architecture for On-Line Learning and Optimization based on Adaptive Dynamic Programming},
+    journal = {Neurocomputing},
+    year = {in press},
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+
+
+
+@INBOOK{5Werbos:2005,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {H. M. Bucker, and G. Corliss, and P. Hovland, and U. Naumann, and B. Norris},
+  TITLE =        {Automatic Differentiation: Applications, Theory and Implementations, Lecture Notes in Computational Science and Engineering},
+  CHAPTER =      {{Backwards Differentiation in AD and Neural Nets: Past Links and New Opportunities}},
+  pages =        {15-34},
+  PUBLISHER =    {Springer},
+  YEAR =         {2005},
+  volume =       {50},
+
+}
+
+
+@INPROCEEDINGS{6Werbos:2002,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {What Do Neural Nets and Quantum Theory Tell Us about Mind and Reality?},
+  BOOKTITLE =    {{No Matter, Never Mind: Proceedings of Toward a Science of Consciousness: Fundamental approaches}},
+  YEAR =         {2002},
+  editor =       {K. Yasue, and M. Jibu, and T. D. Senta},
+  pages =        {63-87},
+  publisher =    {Springer},
+}
+
+
+
+
+
+
+
+@INPROCEEDINGS{10Werbos:1988,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Backpropagation: Past and Future},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {1988},
+  pages =        {I-343-I-353},
+
+}
+
+
+
+
+
+@INBOOK{12Werbos:1983,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {B. Lev},
+  TITLE =        {Energy Models and Studies},
+  CHAPTER =      {{Solving and Optimizing Complex Systems: Lessons from the EIA Long-Term Energy Model}},
+  pages =        {163-182},
+
+  YEAR =         {1983},
+
+  address =      {Amsterdam, Holland},
+
+}
+
+@ARTICLE{13Werbos:1988,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Generalization of Backpropagation with Application to A Recurrent Gas Market
+Model},
+  JOURNAL =      {Neural Netw.},
+  YEAR =         {1988},
+  volume =       {1},
+
+  pages =        {339-356},
+
+}
+
+@ARTICLE{15Werbos:1991,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {An Overview of Neural Networks for Control},
+  JOURNAL =      {IEEE Control Syst. Mag.},
+  YEAR =         {1991},
+  volume =       {11},
+  number =       {1},
+  pages =        {40-41},
+
+}
+
+
+
+@INPROCEEDINGS{23Starzyk:2006,
+  AUTHOR =       {J. A. Starzyk, and Y. Liu, and H. He},
+  TITLE =        {Challenges of Embodied Intelligence},
+  BOOKTITLE =    {{Proc. Int. Conf. Signals and Electronic Syst.}},
+  YEAR =         {2006},
+
+  pages =        { 534-541},
+
+}
+
+
+@INBOOK{24Starzyk:2008,
+  AUTHOR =       {J. A. Starzyk},
+  TITLE =        {Frontiers in Robotics, Automation and Control},
+  CHAPTER =      {{Motivation in Embodied Intelligence}},
+  pages =        {83-110},
+  PUBLISHER =    {InTech Education and Publishing},
+  YEAR =         {2008},
+
+}
+
+@BOOK{25Sutton:1998,
+  AUTHOR =       {R. S. Sutton, and A. G. Barto},
+
+  TITLE =        {Reinforcement Learning: An Introduction},
+  PUBLISHER =    {MIT Press},
+  YEAR =         {1998},
+
+  address =      {Cambridge, MA},
+
+}
+
+@INPROCEEDINGS{26Geramifard:2006,
+  AUTHOR =       {A. Geramifard, and M. Bowling, and R. S. Sutton},
+  TITLE =        {Incremental Least-Squares Temporal Difference Learning},
+  BOOKTITLE =    {{Proc. Twenty-First National Conf. Artificial Intelligence}},
+  YEAR =         {2006},
+  pages =        {356-361},
+
+}
+
+@INPROCEEDINGS{27Rafols:2005,
+  AUTHOR =       {E. J. Rafols, and M. B. Ring, and R. S. Sutton, and B. Tanner},
+  TITLE =        {Using Predictive Representations to
+Improve Generalization in Reinforcement Learning},
+  BOOKTITLE =    {{Proc. Twenty-First National Conf. Artificial Intelligence}},
+  YEAR =         {2005},
+  pages =        {835-840},
+
+}
+
+@ARTICLE{28Kaelbling:1996,
+  AUTHOR =       {L. P. Kaelbling, and M. L. Littman, and A. W. Moore},
+  TITLE =        {Reinforcement Learning: A Survey},
+  JOURNAL =      {Journal of Artificial Intelligence Research},
+  YEAR =         {1996},
+  volume =       {4},
+  pages =        {237-285},
+
+}
+
+@INBOOK{29Werbos:1992,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {D. A. White, and D. A. Sofge},
+  TITLE =        {Handbook of Intelligent Control},
+  CHAPTER =      {{Approximate Dynamic Programming for Real Time Control and Neural Modeling}},
+  pages =        {493-525},
+  YEAR =         {1992},
+  PUBLISHER =    {Van Nostrand},
+  address =      {New York},
+
+}
+
+@BOOK{30Si:2004,
+  AUTHOR =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+
+}
+
+@ARTICLE{31Prokhorov:1997,
+  AUTHOR =       {D. V. Prokhorov, and D. C. Wunsch},
+  TITLE =        {Adaptive Critic Designs},
+  JOURNAL =      {IEEE Trans. on Neural Netw.},
+  YEAR =         {1997},
+  volume =       {8},
+  number =       {5},
+  pages =        {997-1007},
+
+}
+
+@BOOK{32White:1992,
+  AUTHOR =       {D. A. White, and D. A. Sofge},
+
+  TITLE =        {Handbook of Intelligent Control},
+
+  YEAR =         {1992},
+
+  PUBLISHER =    {Van Nostrand},
+
+  address =      {New York},
+
+}
+
+
+@BOOK{33Bertsekas:1996,
+  AUTHOR =       {D. P. Bertsekas, and J. Tsitsiklis},
+
+  TITLE =        {Neuro-Dynamic Programming},
+
+  YEAR =         {1996},
+
+  PUBLISHER =    {Athena Scientific},
+
+}
+
+@BOOK{34Bertsekas:2007,
+  AUTHOR =       {W. B. Powell},
+
+  TITLE =        {Approximate Dynamic Programming: Solving the Curses of Dimensionality},
+
+  YEAR =         {2007},
+
+  PUBLISHER =    {Wiley-Interscience},
+
+}
+
+@INPROCEEDINGS{35Liu:2009,
+  AUTHOR =       {D. Liu, and N. Jin},
+  TITLE =        {Adaptive Dynamic Programming for Discrete-time Systems With Infinite Horizon and Epsilon-error Bound in The Performance Cost},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {2009},
+
+}
+
+@ARTICLE{36Wang:2009,
+  AUTHOR =       {F. Y. Wang, and H. Zhang, and D. Liu},
+  TITLE =        {Adaptive Dynamic Programming: An Introduction},
+  JOURNAL =      {IEEE Comput. Intel. Mag.},
+  YEAR =         {2009},
+  volume =       {4},
+  number =       {2},
+  pages =        {39-47},
+}
+
+@INPROCEEDINGS{37Vamvoudakis:2009,
+  AUTHOR =       {K. Vamvoudakis, and F. L. Lewis},
+  TITLE =        {Online Actor Critic Algorithm to Solve The Continuous-Time Infinite Horizon Optimal Control Problem},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {2009},
+
+}
+
+@ARTICLE{38Balakrishnan:2008,
+  AUTHOR =       {S. N. Balakrishnan, and J. Ding, and F. L. Lewis},
+  TITLE =        {Issues on Stability of ADP Feedback Controllers for Dynamical Systems},
+  JOURNAL =      {IEEE Trans. on Syst. Man, Cybern., Part B, special issue on ADP/RL, invited survey paper},
+  YEAR =         {2008},
+  volume =       {38},
+  number =       {4},
+  pages =        {913-917},
+
+}
+
+@ARTICLE{39Al-Tamimi:2007,
+  AUTHOR =       {A. Al-Tamimi, and M. Abu-Khalaf, and F. L. Lewis},
+  TITLE =        {Adaptive Critic Designs for Discrete-Time Zero-Sum Games with Application to H-Infinity Control},
+  JOURNAL =      {IEEE Trans. on Syst. Man, Cybern., Part B},
+  YEAR =         {2007},
+  volume =       {37},
+  number =       {1},
+  pages =        {240-247},
+
+}
+
+@INBOOK{42Werbos:2004,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  CHAPTER =      {{ADP: Goals, Opportunities And Principles}},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+
+}
+
+
+
+@INBOOK{44Ferrari:2004,
+  AUTHOR =       {S. Ferrari, and R. F. Stengel},
+  editor =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  CHAPTER =      {{Model-based Adaptive Critic Designs}},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+}
+
+@INBOOK{45Werbos:1992,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {D. A. White, and D. A. Sofge},
+  TITLE =        {Handbook of Intelligent Control},
+  CHAPTER =      {{Neuralcontrol and Supervised Learning: an Overview and Evaluation}},
+  YEAR =         {1992},
+  PUBLISHER =    {Van Nostrand},
+  address =      {New York},
+
+}
+
+
+
+@INBOOK{46Werbos:1977,
+  AUTHOR =       {P. J. Werbos},
+
+  TITLE =        {General System Yearbook},
+  CHAPTER =      {{Advanced Forecasting Methods for Global Crisis Warning and Models of Intelligence}},
+  pages =        {25-38},
+
+  YEAR =         {1977},
+  volume =       {22},
+
+}
+
+@ARTICLE{47Si:2001,
+  AUTHOR =       {J. Si, and Y. T. Wang},
+  TITLE =        {On-line Learning Control by Association and Reinforcement},
+  JOURNAL =      {IEEE Trans. on Neural Netw.},
+  YEAR =         {2001},
+  volume =       {12},
+  number =       {2},
+  pages =        {264-276},
+
+}
+
+
+@ARTICLE{48Werbos:1979,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Changes in Global Policy Analysis Procedures Suggested by New Methods of Optimization},
+  JOURNAL =      {Policy Analysis and Information Systems},
+  YEAR =         {1979},
+  volume =       {3},
+  number =       {1},
+  pages =        {27-52},
+
+}
+
+@INBOOK{49Werbos:1981,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {R. Drenick, and Kozin},
+  TITLE =        {System Modeling and Optimization},
+  CHAPTER =      {{Applications of Advances in Nonlinear Sensitivity Analysis}},
+
+  YEAR =         {1981},
+
+  address =      {New York: Springer},
+
+}
+
+@ARTICLE{50Werbos:2008,
+  AUTHOR =       {P. J. Werbos},
+  YEAR =         {2008},
+  TITLE =        {Stable Adaptive Control Using New Critic Designs},
+  JOURNAL =      {[online], available: http://arxiv.org as adap-org/9810001},
+}
+
+@ARTICLE{51Werbos:1987,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Building And Understanding Adaptive Systems: A Statistical/Numerical Approach to Factory Automation And Brain Research},
+  JOURNAL =      {IEEE Trans. on Syst. Man, Cybern.},
+  YEAR =         {1987},
+  volume =       {17},
+  number =       {1},
+  pages =        {7-20},
+
+}
+
+@INPROCEEDINGS{52Werbos:1993,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Supervised Learning: Can It Escape Its Local Minimum?},
+  BOOKTITLE =    {{Proceedings WCNN93}},
+  YEAR =         {1993},
+
+  pages =        {358-363},
+
+}
+
+@INPROCEEDINGS{53Werbos:1992,
+  AUTHOR =       {P. J. Werbos, and A. Pellionisz},
+  TITLE =        {Neurocontrol And Neurobiology: New Developments And
+Connections},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {1992},
+  volume =       {3},
+
+  pages =        {373-378},
+
+}
+
+
+
+@INBOOK{54Werbos:1992,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {D. A. White, and D. A. Sofge},
+  TITLE =        {Handbook of Intelligent Control},
+  CHAPTER =      {{Approximate Dynamic Programming for Real Time Control and Neural Modeling}},
+  pages =        {493-525},
+  YEAR =         {1992},
+  PUBLISHER =    {Van Nostrand},
+  address =      {New York},
+
+}
+
+@ARTICLE{55Nicolelis:1993,
+  AUTHOR =       {M. A. L. Nicolelis, and R. C. Lin, and D. J. Woodward, and J. K. Chapin},
+  TITLE =        {Induction of Immediate Spatiotemporal Changes in Thalamic Networks
+by Peripheral Block of Ascending Cutaneous Information},
+  JOURNAL =      {Nature},
+  YEAR =         {1993},
+  volume =       {361},
+  number =       {6412},
+  pages =        {533-536},
+
+}
+
+@ARTICLE{56Nicolelis:1995,
+  AUTHOR =       {M. A. Nicolelis, and L. A. Baccala, and R. C. Lin, and J. K. Chapin},
+  TITLE =        {Sensorimotor Encoding by Synchronous Neural Ensemble Activity at
+Multiple Levels of The Somatosensory System},
+  JOURNAL =      {Science},
+  YEAR =         {1995},
+  volume =       {268},
+  number =       {5215},
+  pages =        {1353-1358},
+
+}
+
+@INBOOK{57Werbos:1999,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {J. Webster},
+  TITLE =        {Encyclopedia of Electrical And Electronics Engineering},
+  CHAPTER =      {{Neurocontrollers}},
+
+  PUBLISHER =    {Wiley},
+  YEAR =         {1999},
+
+  address =      {New York},
+
+}
+
+@ARTICLE{58Ilin:2008,
+  AUTHOR =       {R. Ilin, and R. Kozma, and P. J. Werbos},
+  TITLE =        {Beyond Feedforward Models
+Trained by Backpropagation: A Practical Training Tool For A More Efficient Universal Approximator},
+  JOURNAL =      {IEEE Trans. on Neural Netw.},
+  YEAR =         {2008},
+  volume =       {19},
+  number =       {6},
+  pages =        {929-937},
+
+}
+
+
+@INPROCEEDINGS{59Feldkamp:2003,
+  AUTHOR =       {L. A. Feldkamp, and D. V. Prokhorov},
+  TITLE =        {Recurrent Neural Networks For State Estimation},
+  BOOKTITLE =    {{Proc. Workshop on Adaptive And Learning Systems}},
+  YEAR =         {2003},
+  editor =       {K. Narendra},
+
+  publisher =    {Yale University},
+
+}
+
+
+@INBOOK{60Feldkamp:1998,
+  AUTHOR =       {L. Feldkamp, and D. Prokhorov, and C. Eagen, and F. Yuan},
+  editor =       {J. Suykens, and J. Vandewalle},
+  TITLE =        {Nonlinear Modeling: Advanced Black-Box Techniques},
+  CHAPTER =      {{Enhanced Multistream Kalman Filter Training For Recurrent Networks}},
+  pages =        {29-53},
+  PUBLISHER =    {Kluwer},
+  YEAR =         {1998},
+
+  address =      {Norwell, MA},
+
+}
+
+
+@ARTICLE{61Puskorius:1994,
+  AUTHOR =       {G. V. Puskorius, and L. A. Feldkamp},
+  TITLE =        {Neurocontrol of Nonlinear Dynamical Systems With Kalman Filter Trained Recurrent Networks},
+  JOURNAL =      {IEEE Trans. on Neural Netw.},
+  YEAR =         {1994},
+  volume =       {5},
+  number =       {2},
+  pages =        {279-297},
+
+}
+
+@INPROCEEDINGS{62Sun:1998,
+  AUTHOR =       {P. Sun, and K. Marko},
+  TITLE =        {Optimal Learning Rate for Training Time Lagged Recurrent Neural Networks With The Extended Kalman Filter Algorithm},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {1998},
+  volume =       {2},
+
+  pages =        {1287-1292},
+
+}
+
+@INBOOK{63Werbos:1998,
+  AUTHOR =       {P. J. Werbos},
+  editor =       {M. Karny, and K. Warwich, and V. Kurkova},
+  TITLE =        {Dealing With Complexity: A Neural Networks Approach},
+  CHAPTER =      {{Brain-like Design to Learn Optimal Decision Strategies in Complex Environments}},
+
+  PUBLISHER =    {Springer},
+  YEAR =         {1998},
+
+}
+
+@INPROCEEDINGS{64Qiao:2007,
+  AUTHOR =       {W. Qiao, and G. Venayagamoorthy, and R. Harley},
+  TITLE =        {{DHP-based wide-area coordinating control of a power system with a large wind farm and multiple FACTS devices}},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {2007},
+
+  pages =        {2093-2098},
+
+}
+
+@INPROCEEDINGS{65Fogel:2004,
+  AUTHOR =       {D. B. Fogel, and T. J. Hays, and S. L. Han, and J. Quon},
+  TITLE =        {A Self-learning Evolutionary Chess Program},
+  BOOKTITLE =    {{Proc. of the IEEE}},
+  YEAR =         {2004},
+  volume =       {92},
+  number =       {12},
+  pages =        {1947-1954},
+
+}
+
+@INBOOK{66Si:2004,
+  AUTHOR =       {J. Si, and D. Liu},
+  editor =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  CHAPTER =      {{Direct Neural Dynamic Programming}},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+  pages =        {125-151},
+
+}
+
+@INBOOK{67Si:2004,
+  AUTHOR =       {R. Enns, and J. Si},
+  editor =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  CHAPTER =      {{Helicopter Flight Control Using Direct Neural Dynamic Programming}},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+  pages =        {535-559},
+
+}
+
+@ARTICLE{68Melzack:1990,
+  AUTHOR =       {R. Melzack},
+  TITLE =        {Phantom Limbs And The Concept of A Neuromatrix},
+  JOURNAL =      {Trends Neurosci.},
+  YEAR =         {1990},
+  volume =       {13},
+
+  pages =        {88-92},
+
+}
+
+@ARTICLE{69Peyron:2000,
+  AUTHOR =       {R. Peyron, and B. Laurent, and L. Garcia-Larrea},
+  TITLE =        {Functional Imaging of Brain Responses to Pain. A Review And Meta-analysis},
+  JOURNAL =      {Neurophysiol Clin.},
+  YEAR =         {2000},
+  volume =       {30},
+  pages =        {263-288},
+
+}
+
+
+
+@ARTICLE{70Derbyshire:1997,
+  AUTHOR =       {S. W. G. Derbyshire, and A. K. P. Jones, and F. Gyulai, and S. Clark, and D. Townsend, and L. L. Firestone},
+  TITLE =        {Pain Processing During Three Levels of Noxious Stimulation Produces Differential Patterns of Central Activity},
+  JOURNAL =      {Pain},
+  YEAR =         {1997},
+  volume =       {73},
+  number =       {3},
+  pages =        {431-445},
+
+}
+
+@ARTICLE{71Hsieh:2001,
+  AUTHOR =       {J. C. Hsieh, and C. H. Tu, and F. P. Chen},
+  TITLE =        {Activation of The Hypothalamus Characterizes The Acupuncture Stimulation At The Analgesic Point In Human: A Positron Emission Tomography Study},
+  JOURNAL =      {Neurosci. Lett.},
+  YEAR =         {2001},
+  volume =       {307},
+
+  pages =        {105-108},
+
+}
+
+
+@INPROCEEDINGS{72Werbos:1998,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Multiple Models for Approximate Dynamic Programming},
+  BOOKTITLE =    {{Proc. Yale Conf. on Learning And Adaptive Systems}},
+  YEAR =         {1998},
+  editor =       {K. Narendra},
+
+  address =      {New Haven},
+
+  publisher =    {EE Dept., Yale University},
+
+}
+
+
+@BOOK{73Frijda:1987,
+  AUTHOR =       {N. H. Frijda},
+
+  TITLE =        {The Emotions},
+  PUBLISHER =    {Cambridge University Press},
+  YEAR =         {1987},
+
+}
+
+@INPROCEEDINGS{74Anderson:1987,
+  AUTHOR =       {C. Anderson},
+  TITLE =        {Strategy Learning With Multi-layer Connectionist Representation},
+  BOOKTITLE =    {{Proc. International Workshop on Machine Learning}},
+  YEAR =         {1987},
+
+  pages =        {103-114},
+
+}
+
+
+@ARTICLE{75Anderson:1989,
+  AUTHOR =       {C. Anderson},
+  TITLE =        {Learning to Control An Inverted Pendulum Using Neural Networks},
+  JOURNAL =      {IEEE Control Syst. Mag.},
+  YEAR =         {1989},
+  volume =       {9},
+  number =       {3},
+  pages =        {31-37},
+
+}
+
+@ARTICLE{76Barto:1983,
+  AUTHOR =       {A. G. Barto, and R. S. Sutton, and C. W. Anderson},
+  TITLE =        {Neuron Like Adaptive Elements That Can Solve Difficult Learning Control Problems},
+  JOURNAL =      {IEEE Trans. on Syst. Man, Cybern.},
+  YEAR =         {1983},
+  volume =       {13},
+  pages =        {834-847},
+
+}
+
+@ARTICLE{77Moriarty:1996,
+  AUTHOR =       {D. E. Moriarty, and R. Miikulainen},
+  TITLE =        {Efficient Reinforcement Learning Through Symbiotic Evolution},
+  JOURNAL =      {Machine Learning},
+  YEAR =         {1996},
+  volume =       {22},
+
+  pages =        {11-32},
+
+}
+
+
+@INBOOK{78Venayagamoorthy:2004,
+  AUTHOR =       {G. K. Venayagamoorthy, and R. G. Harley},
+  editor =       {J. Si, and A. G. Barto, and W. B. Powell, and D. C. Wunsch},
+  TITLE =        {Handbook of Learning and Approximate Dynamic Programming},
+  CHAPTER =      {{Application of Approximate Dynamic Programming in Power System Control}},
+  pages =        {479-515},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {2004},
+
+}
+
+@ARTICLE{79Ray:2008,
+  AUTHOR =       {S. Ray, and G. K. Venayagamoorthy, and B. Chaudhuri, and R. Majumder},
+  TITLE =        {Comparison of Adaptive Critics and Classical Approaches Based Wide Area Controllers for a Power System},
+  JOURNAL =      {IEEE Trans. on Syst. Man, Cybern., Part B},
+  YEAR =         {2008},
+  volume =       {38},
+  number =       {4},
+  pages =        {1002-1007},
+
+}
+
+@ARTICLE{90Venayagamoorthy:2003,
+  AUTHOR =       {G. K. Venayagamoorthy, and R. G. Harley, and D. C. Wunsch},
+  TITLE =        {Dual Heuristic Programming Excitation Neurocontrol for Generators in a Multimachine Power System},
+  JOURNAL =      {IEEE Trans. on Industry Applications},
+  YEAR =         {2003},
+  volume =       {39},
+  number =       {2},
+  pages =        {382-394},
+
+}
+
+
+@INPROCEEDINGS{92Werbos:2009,
+  AUTHOR =       {P. J. Werbos},
+  TITLE =        {Putting More Brain-like Intelligence Into The Electric Power Grid: What We Need And How to Do It},
+  BOOKTITLE =    {{Proc. IEEE Int. Conf. Neural Netw.}},
+  YEAR =         {2009},
+}
+
+@ARTICLE{Eltohamy:1998,
+  AUTHOR =       {K. D. Eltohamy and C.-Y. Kuo},
+  TITLE =        {Nonlinear optimal control of a triple link inverted pendulum with single control input},
+  JOURNAL =      {Int. J. Contr.},
+  YEAR =         {1998},
+  volume =       {69},
+  number =       {2},
+  pages =        {239-256},
+
+}
+@INPROCEEDINGS{94JianFu:2011,
+  AUTHOR =       {J. Fu, H. He and X. Zhou},
+  TITLE =        {Adaptive Learning and Control for MIMO System Based On Adaptive Dynamic Programming},
+  BOOKTITLE =    {{IEEE Trans. Neural Netw.}},
+  YEAR =         {2011},
+}
