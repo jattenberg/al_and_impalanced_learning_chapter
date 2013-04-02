@@ -51,19 +51,11 @@
 
 \noindent\textbf{Abstract}
 
-The performance of a predictive model is tightly coupled with the set of data used in the training process. 
-While having more examples available when training will often result in a better informed, more accurate model, 
-memory limitations and real-world costs associated with gathering labeled examples often constrain just how 
-many training data are available to be considered by a model's training process. In the setting where a only a limited
-amount of training data is available during model induction, it often becomes meaninful to consider just which examples
+The performance of a predictive model is tightly coupled with the data used during training. 
+While using more examples in the training will often result in a better informed, more accurate model, limits on computer memory and real-world costs associated with gathering labeled examples often constrain the amount of data that can be used for training. In settings where the number of 
+training examples is limited, it often becomes meaninful to carefully choose  just which examples
 are selected. In {\em Active learning}, the model itself places a hands-on role in the selection of examples for 
-labeling, those examples to be used for training. Numerous studies have demonstrated emperically and
-theoretically the benefits of active learning.; a training system that interactively involves the model being
-trained can often result in a much more accurate model than simply selecting random examples for training, 
-given a fixed budget.  Imbalanced settings provide special opportunities and challenges for active learning; 
-while active learning can be used to build models that counteractact the harmful effects of learning under class
-imbalance, extreme class imbalance can cause an active learning strategy to ``fail'', preventing the selection
-scheme from choosing any useful examples for labeling. This chapter focuses on the interaction between actinve
+labeling from a large pool of unlabeled examples. These examples are used for model training. Numerous studies have demonstrated, both empirically and theoretically, the beneﬁts of active learning: Given a fixed budget, a training system that interactively involves the current model in selecting the training examples can often result in a far greater accuracy than a system that simply selects random training examples. Imbalanced settings provide special opportunities and challenges for active learning. For example, while active learning can be used to build models that counteract the harmful effects of learning under class imbalance, extreme class imbalance can cause an active learning strategy to “fail”, preventing the selection scheme from choosing any useful examples for labeling. This chapter focuses on the interaction between active
 learning and class imbalance, discussing i) active learning techniques designed specifically for dealing with 
 imbalanced settings, ii) strategies that leverage active leaning to overcome the deleterious effects of class imbalance, 
 iii) how extreme class imbalance can prevent active leaning systems from selecting useful examples, and alternatives
